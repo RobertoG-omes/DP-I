@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EcoPonto Interativo — Aprenda onde e como descartar seus resíduos corretamente. Educação ambiental baseada na Lei 12.305/2010." />
+  <title>EcoPonto Interativo | Descarte Consciente</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Navegação principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+        <span class="brand-icon" aria-hidden="true"><i class="bi bi-recycle"></i></span>
+        <span class="brand-text">Eco<strong>Ponto<strong> Interativo</strong></span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Abrir menu de navegação"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#infografico">Tipos de Resíduos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#como-funciona">Como Funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#localizacao">Encontrar Ecoponto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lei">Legislação</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link nav-cta" href="#localizacao">
+              <i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>Encontrar Ecoponto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero-section" aria-label="Seção principal">
+    <div class="hero-bg-decor" aria-hidden="true">
+      <div class="decor-circle decor-circle--1"></div>
+      <div class="decor-circle decor-circle--2"></div>
+      <div class="decor-circle decor-circle--3"></div>
+      <div class="decor-leaf decor-leaf--1"><i class="bi bi-tree-fill"></i></div>
+      <div class="decor-leaf decor-leaf--2"><i class="bi bi-tree-fill"></i></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-12 col-lg-7 hero-text-col">
+          <span class="hero-badge">
+            <i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>
+            Lei nº 12.305/2010 — Política Nacional de Resíduos Sólidos
+          </span>
+          <h1 class="hero-title">
+            O lugar certo<br />
+            <em>faz toda<br />a diferença.</em>
+          </h1>
+          <p class="hero-subtitle">
+            Cada resíduo descartado corretamente é um passo em direção a um planeta mais saudável.
+            Descubra os <strong>Ecopontos</strong> perto de você e aprenda o que descartar em cada um.
+          </p>
+          <div class="hero-actions">
+            <a href="#localizacao" class="btn btn-primary btn-hero" aria-label="Saiba onde descartar seus resíduos">
+              <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
+              Saiba Onde Descartar
+            </a>
+            <a href="#infografico" class="btn btn-outline-hero" aria-label="Conheça os tipos de resíduos">
+              Conheça os Resíduos
+              <i class="bi bi-arrow-down ms-2" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="hero-stats" role="list" aria-label="Estatísticas sobre reciclagem">
+            <div class="stat-item" role="listitem">
+              <span class="stat-number">68<sup>mi</sup></span>
+              <span class="stat-label">Toneladas de lixo/ano no Brasil</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-number">4%</span>
+              <span class="stat-label">Taxa de reciclagem atual</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-number">+5k</span>
+              <span class="stat-label">Ecopontos no país</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5 hero-visual-col d-none d-lg-flex" aria-hidden="true">
+          <div class="hero-visual-card">
+            <div class="visual-icon-grid">
+              <div class="vis-icon vis-papel"><i class="bi bi-newspaper"></i><span>Papel</span></div>
+              <div class="vis-icon vis-plastico"><i class="bi bi-cup-straw"></i><span>Plástico</span></div>
+              <div class="vis-icon vis-metal"><i class="bi bi-battery-charging"></i><span>Metal</span></div>
+              <div class="vis-icon vis-vidro"><i class="bi bi-droplet-half"></i><span>Vidro</span></div>
+              <div class="vis-icon vis-eletronico"><i class="bi bi-phone"></i><span>Eletrônico</span></div>
+              <div class="vis-icon vis-oleo"><i class="bi bi-moisture"></i><span>Óleo</span></div>
+            </div>
+            <div class="visual-center-icon">
+              <i class="bi bi-recycle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <section id="infografico" class="infografico-section" aria-label="Infográfico de tipos de resíduos">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Guia Interativo</span>
+        <h2 class="section-title">O que vai em cada <em>Ecoponto?</em></h2>
+        <p class="section-subtitle">
+          Clique em cada card para descobrir o que pode (e o que <strong>não pode</strong>) ser descartado,
+          a cor da lixeira correta e onde encontrar o ponto de coleta.
+        </p>
+      </div>
+
+      <div class="row g-4 infografico-grid" role="list" aria-label="Categorias de resíduos recicláveis">
+
+        <!-- CARD 1: Papel -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="papel"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Papel e Papelão — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-newspaper"></i>
+              </div>
+              <h3 class="card-title">Papel &amp; Papelão</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#1565C0"></span>
+                Lixeira <strong>Azul</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Jornais e revistas</li>
+                <li>Caixas de papelão limpas</li>
+                <li>Folhas de papel limpo</li>
+                <li>Embalagens Tetra Pak</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Não pode:</h4>
+              <ul>
+                <li>Papel higiênico</li>
+                <li>Papel carbono/plastificado</li>
+                <li>Guardanapos sujos</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                Amasse e seque antes de descartar.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 2: Plástico -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="plastico"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Plástico — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-cup-straw"></i>
+              </div>
+              <h3 class="card-title">Plástico</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#E53935"></span>
+                Lixeira <strong>Vermelha</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Garrafas PET</li>
+                <li>Potes e embalagens limpas</li>
+                <li>Sacolas plásticas</li>
+                <li>Tampas e frascos</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Não pode:</h4>
+              <ul>
+                <li>Esponjas e espumas</li>
+                <li>Fraldas descartáveis</li>
+                <li>Isopor com resíduos</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                Lave antes de descartar.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 3: Metal -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="metal"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Metal — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h3 class="card-title">Metal</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#F9A825"></span>
+                Lixeira <strong>Amarela</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Latas de alumínio</li>
+                <li>Latas de conserva (aço)</li>
+                <li>Tampas metálicas</li>
+                <li>Sucata metálica limpa</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Não pode:</h4>
+              <ul>
+                <li>Latas de tinta ou solvente</li>
+                <li>Aerossóis não vazios</li>
+                <li>Pilhas e baterias</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                Amasse as latas para economizar espaço.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 4: Vidro -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="vidro"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Vidro — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-droplet-half"></i>
+              </div>
+              <h3 class="card-title">Vidro</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#2E7D32"></span>
+                Lixeira <strong>Verde</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Garrafas de vidro</li>
+                <li>Potes e frascos</li>
+                <li>Copos e taças</li>
+                <li>Janelas e espelhos</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Não pode:</h4>
+              <ul>
+                <li>Lâmpadas (descarte especial)</li>
+                <li>Espelhos (contêm prata)</li>
+                <li>Cerâmica e porcelana</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                ⚠️ Cuidado com cacos — embale com segurança.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 5: Eletrônicos -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="eletronico"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Eletrônicos — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3 class="card-title">Eletrônicos</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#6A1B9A"></span>
+                Ponto de Coleta <strong>Especial</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Celulares e tablets</li>
+                <li>Computadores e TVs</li>
+                <li>Carregadores e cabos</li>
+                <li>Eletrodomésticos pequenos</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Atenção:</h4>
+              <ul>
+                <li>Nunca misture com lixo comum</li>
+                <li>Remova dados pessoais</li>
+                <li>Baterias: descarte separado</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                Lixo eletrônico (e-waste) contém substâncias tóxicas.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 6: Óleo de Cozinha -->
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="residuo-card"
+            data-category="oleo"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Óleo de Cozinha — clique para expandir"
+          >
+            <div class="card-front">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <i class="bi bi-moisture"></i>
+              </div>
+              <h3 class="card-title">Óleo de Cozinha</h3>
+              <div class="lixeira-badge">
+                <span class="lixeira-dot" style="background:#E65100"></span>
+                Coletor <strong>Específico</strong>
+              </div>
+              <span class="card-hint" aria-hidden="true">Clique para saber mais</span>
+            </div>
+            <div class="card-back" aria-hidden="true">
+              <h4><i class="bi bi-check-circle-fill text-success me-1"></i>Pode descartar:</h4>
+              <ul>
+                <li>Óleo vegetal usado</li>
+                <li>Óleo de fritura</li>
+                <li>Gordura animal solidificada</li>
+                <li>Resíduos oleosos de cozinha</li>
+              </ul>
+              <h4 class="mt-3"><i class="bi bi-x-circle-fill text-danger me-1"></i>Nunca jogue:</h4>
+              <ul>
+                <li>Na pia ou ralo</li>
+                <li>No vaso sanitário</li>
+                <li>No lixo comum sem embalagem</li>
+              </ul>
+              <div class="card-back-footer">
+                <i class="bi bi-info-circle me-1"></i>
+                1L de óleo contamina 1 milhão de litros d'água.
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div><!-- /infografico-grid -->
+
+      <div class="lixeiras-legend" role="complementary" aria-label="Legenda de cores das lixeiras de coleta seletiva">
+        <h3 class="legend-title">
+          <i class="bi bi-palette me-2" aria-hidden="true"></i>
+          Cores da Coleta Seletiva
+        </h3>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#1565C0" aria-hidden="true"></span>
+            <span><strong>Azul</strong> — Papel</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#E53935" aria-hidden="true"></span>
+            <span><strong>Vermelho</strong> — Plástico</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#F9A825" aria-hidden="true"></span>
+            <span><strong>Amarelo</strong> — Metal</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#2E7D32" aria-hidden="true"></span>
+            <span><strong>Verde</strong> — Vidro</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#8D6E63" aria-hidden="true"></span>
+            <span><strong>Marrom</strong> — Orgânico</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#424242" aria-hidden="true"></span>
+            <span><strong>Cinza/Preto</strong> — Rejeito</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="como-funciona" class="como-funciona-section" aria-label="Como funciona o descarte correto">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag section-tag--light">Processo</span>
+        <h2 class="section-title section-title--light">Como funciona o <em>descarte correto?</em></h2>
+      </div>
+      <div class="row g-4 steps-row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="step-card" data-step="1">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-icon" aria-hidden="true"><i class="bi bi-search"></i></div>
+            <h4>Identifique</h4>
+            <p>Classifique o resíduo: reciclável, orgânico, perigoso ou rejeito.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="step-card" data-step="2">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-icon" aria-hidden="true"><i class="bi bi-droplet"></i></div>
+            <h4>Limpe</h4>
+            <p>Lave embalagens e remova restos de alimento antes de descartar.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="step-card" data-step="3">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></div>
+            <h4>Localize</h4>
+            <p>Encontre o Ecoponto ou lixeira colorida mais próxima de você.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="step-card" data-step="4">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
+            <h4>Descarte</h4>
+            <p>Deposite na cor correta e contribua com o ciclo de reciclagem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao" class="localizacao-section" aria-label="Busca de Ecopontos por CEP">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <div class="section-header">
+            <span class="section-tag">Localização</span>
+            <h2 class="section-title">Encontre um Ecoponto <em>perto de você</em></h2>
+            <p class="section-subtitle">
+              Digite seu CEP abaixo para simular a busca por Ecopontos e pontos de coleta seletiva
+              na sua região.
+            </p>
+          </div>
+
+          <div class="cep-form" role="search" aria-label="Formulário de busca por CEP">
+            <div class="cep-input-group">
+              <label for="cepInput" class="visually-hidden">Informe seu CEP</label>
+              <input
+                type="text"
+                id="cepInput"
+                class="cep-input"
+                placeholder="00000-000"
+                maxlength="9"
+                inputmode="numeric"
+                aria-required="true"
+                aria-describedby="cepHelp"
+              />
+              <button
+                id="buscarBtn"
+                class="btn btn-primary btn-buscar"
+                type="button"
+                aria-label="Buscar Ecopontos pelo CEP informado"
+              >
+                <i class="bi bi-search me-2" aria-hidden="true"></i>Buscar
+              </button>
+            </div>
+            <p id="cepHelp" class="cep-help-text">
+              <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
+              Insira apenas números ou no formato 00000-000
+            </p>
+          </div>
+
+          <div id="cepResultado" class="cep-resultado" aria-live="polite" aria-atomic="true"></div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="mapa-simulado" id="mapaSimulado" aria-label="Mapa simulado de Ecopontos">
+            <div class="mapa-placeholder">
+              <div class="mapa-grid" aria-hidden="true">
+                <div class="mapa-rua mapa-rua--h" style="top:30%"></div>
+                <div class="mapa-rua mapa-rua--h" style="top:60%"></div>
+                <div class="mapa-rua mapa-rua--h" style="top:80%"></div>
+                <div class="mapa-rua mapa-rua--v" style="left:25%"></div>
+                <div class="mapa-rua mapa-rua--v" style="left:55%"></div>
+                <div class="mapa-rua mapa-rua--v" style="left:75%"></div>
+                <div class="mapa-pino" id="pino1" style="top:28%;left:23%" title="Ecoponto Central"></div>
+                <div class="mapa-pino" id="pino2" style="top:58%;left:53%" title="Ecoponto Norte"></div>
+                <div class="mapa-pino mapa-pino--inativo" id="pino3" style="top:20%;left:70%" title="Ecoponto Leste"></div>
+              </div>
+              <div class="mapa-overlay-msg" id="mapaMsg">
+                <i class="bi bi-map me-2" aria-hidden="true"></i>
+                Insira um CEP para visualizar os Ecopontos
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ecopontoCards" class="ecoponto-cards-row row g-3 mt-4" style="display:none !important" aria-label="Lista de Ecopontos encontrados">
+        <div class="col-12 col-md-4">
+          <div class="ecoponto-card">
+            <div class="ecoponto-icon" aria-hidden="true"><i class="bi bi-recycle"></i></div>
+            <div class="ecoponto-info">
+              <h5>Ecoponto Central</h5>
+              <p><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Rua das Flores, 123</p>
+              <p><i class="bi bi-clock me-1" aria-hidden="true"></i>Seg–Sex: 8h–17h</p>
+              <div class="ecoponto-tipos">
+                <span class="tipo-badge" style="background:#1565C0" title="Papel">P</span>
+                <span class="tipo-badge" style="background:#E53935" title="Plástico">Pl</span>
+                <span class="tipo-badge" style="background:#F9A825" title="Metal">M</span>
+                <span class="tipo-badge" style="background:#2E7D32" title="Vidro">V</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="ecoponto-card">
+            <div class="ecoponto-icon" aria-hidden="true"><i class="bi bi-recycle"></i></div>
+            <div class="ecoponto-info">
+              <h5>Ecoponto Norte</h5>
+              <p><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Av. Sustentável, 456</p>
+              <p><i class="bi bi-clock me-1" aria-hidden="true"></i>Seg–Sáb: 7h–18h</p>
+              <div class="ecoponto-tipos">
+                <span class="tipo-badge" style="background:#6A1B9A" title="Eletrônicos">E</span>
+                <span class="tipo-badge" style="background:#E65100" title="Óleo">O</span>
+                <span class="tipo-badge" style="background:#E53935" title="Plástico">Pl</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="ecoponto-card">
+            <div class="ecoponto-icon" aria-hidden="true"><i class="bi bi-recycle"></i></div>
+            <div class="ecoponto-info">
+              <h5>Ecoponto Leste</h5>
+              <p><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Rua Verde, 789</p>
+              <p><i class="bi bi-clock me-1" aria-hidden="true"></i>Ter–Dom: 9h–16h</p>
+              <div class="ecoponto-tipos">
+                <span class="tipo-badge" style="background:#1565C0" title="Papel">P</span>
+                <span class="tipo-badge" style="background:#2E7D32" title="Vidro">V</span>
+                <span class="tipo-badge" style="background:#F9A825" title="Metal">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="lei" class="lei-section" aria-label="Legislação sobre resíduos sólidos">
+    <div class="container">
+      <div class="lei-banner">
+        <div class="lei-icon" aria-hidden="true">
+          <i class="bi bi-journal-text"></i>
+        </div>
+        <div class="lei-content">
+          <span class="lei-tag">Legislação Federal</span>
+          <h2 class="lei-title">Lei nº 12.305 / 2010</h2>
+          <p class="lei-subtitle">Política Nacional de Resíduos Sólidos (PNRS)</p>
+          <p class="lei-desc">
+            A PNRS estabelece diretrizes para a gestão e gerenciamento dos resíduos sólidos no Brasil,
+            prevendo a responsabilidade compartilhada entre fabricantes, importadores, distribuidores,
+            comerciantes, cidadãos e titulares dos serviços públicos de limpeza urbana.
+          </p>
+          <div class="lei-pillars" role="list" aria-label="Pilares da PNRS">
+            <div class="lei-pillar" role="listitem">
+              <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
+              <span>Logística Reversa</span>
+            </div>
+            <div class="lei-pillar" role="listitem">
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
+              <span>Responsabilidade Compartilhada</span>
+            </div>
+            <div class="lei-pillar" role="listitem">
+              <i class="bi bi-recycle" aria-hidden="true"></i>
+              <span>Coleta Seletiva</span>
+            </div>
+            <div class="lei-pillar" role="listitem">
+              <i class="bi bi-trash3" aria-hidden="true"></i>
+              <span>Eliminação dos Lixões</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4 footer-row">
+
+        <div class="col-12 col-md-4">
+          <div class="footer-brand">
+            <a href="#hero" class="footer-logo" aria-label="EcoPonto Interativo — voltar ao topo">
+              <i class="bi bi-recycle me-2" aria-hidden="true"></i>EcoPonto Interativo
+            </a>
+            <p>Plataforma educacional sobre descarte correto de resíduos sólidos. Desenvolvida para a disciplina de Projeto de Desenvolvimento I e Dispositivos Móveis.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="footer-heading">Navegação</h5>
+          <ul class="footer-links" role="list">
+            <li><a href="#infografico">Tipos de Resíduos</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#localizacao">Encontrar Ecoponto</a></li>
+            <li><a href="#lei">Legislação</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="footer-heading">Referências</h5>
+          <ul class="footer-links" role="list">
+            <li>
+              <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Acessar Lei 12.305/2010 no site do Planalto (abre em nova aba)">
+                <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>Lei 12.305/2010 — PNRS
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.br/mma/pt-br/assuntos/agendaambientalurbana/lixao-zero"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Acessar portal do Ministério do Meio Ambiente (abre em nova aba)">
+                <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>Ministério do Meio Ambiente
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cempre.org.br"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Acessar CEMPRE — Compromisso Empresarial para Reciclagem (abre em nova aba)">
+                <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>CEMPRE — Reciclagem
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-row -->
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 EcoPonto Interativo. Projeto acadêmico — PD-I &amp; Dispositivos Móveis.
+          <span class="footer-sep" aria-hidden="true">|</span>
+          Construído com Bootstrap 5 + JavaScript Vanilla.
+        </p>
+        <p class="footer-lei-ref">
+          Referência legal:
+          <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Lei 12.305/2010 — Política Nacional de Resíduos Sólidos (abre em nova aba)">
+            Lei nº 12.305/2010 — Política Nacional de Resíduos Sólidos
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button
+    id="voltarTopo"
+    class="voltar-topo"
+    aria-label="Voltar ao topo da página"
+    title="Voltar ao topo"
+  >
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
